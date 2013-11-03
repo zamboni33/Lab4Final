@@ -1,25 +1,26 @@
-		.ORIG 0x3000;
-		AND R1, R1, #0;
-		AND R3, R3, #0;
-		AND R4, R4, #0;   Clearing registers
-		ADD R3, R3, #-10; Initialize first -10
-		ADD R4, R4, #-1;	Initialize to -1 to double the -10
-		LEA R5 address;
-		LDW R2, R5, #0;
-loop 		ADD R1, R1, R2;
-		ADD R5, R5, #2;
-		LDW R2, R5, #0;
-		ADD R3, R3, #1;
-		BRn	loop;
-		ADD R3, R3, #-10;
-		ADD R4, R4, #1;
-		BRnz loop;
-		LEA R5, store;
-		STW R1, R5, #0;
-		HALT;
-address 	.FILL  0xC000;
-store		.FILL  0xC014;
-		.END;
+	.ORIG x3000;
+	;AND R1, R1, #0;
+	;AND R3, R3, #0;
+	;AND R4, R4, #0; 	  Clearing registers
+
+	ADD R3, R3, #-10; 	Initialize first -10
+	ADD R3, R3, #-10;
+
+	LEA R5, address; 9 cycles
+	LDW R4, R5, #0; 16 cycles
+loop	LDB R2, R4, #1; 16 cycles
+ 	ADD R1, R1, R2; 9 cycles
+	LDB R2, R4, #0;
+	ADD R4, R4, #1;
+	ADD R3, R3, #1;
+	BRn	loop;
+	LEA R5, store;
+	LDW R4, R5, #0;
+	STW R1, R4, #0;
+	HALT;
+address .FILL xC000;
+store	.FILL xC014;
+	.END;
 		
 	
 	
