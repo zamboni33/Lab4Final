@@ -1,0 +1,20 @@
+
+
+
+int GetLD_REGMUX(int *x)	{ return((x[LD_REGMUX1] << 1) + x[LD_REGMUX1]);}
+int GetPSRMUX(int *x)		{ return(x[PSRMUX	]) }
+int GetLD_PSR(int *x)		{ return(x[LD_PSR	]) }
+int GetLD_INT(int *x)		{ return(x[LD_INT	]) }
+int GetLD_SSP(int *x)		{ return(x[LD_SSP	]) }
+int GetLD_USP(int *x)		{ return(x[LD_USP	]) }
+int GetIEMUX(int *x)		{ return(x[IEMUX	]) }
+int GetGATE_PCMINUS2(int *x)	{ return(x[GATE_PCMINUS2	]) }
+int GetGATE_PSR(int *x)		{ return(x[GATE_PSR	]) }
+/* int GetLD_DRMUX1(int *x)	{ return(x[	]) } */
+/* int GetLD_SRMUX1(int *x)	{ return(x[	]) } */
+int GetGATE_VECTOR(int *x)	{ return(x[GATE_VECTOR	]) }
+int GetLD_VECTOR(int *x)	{ return(x[LD_VECTOR	]) }
+int GetSR2MUX2(int *x)		{ return(x[SR2MUX2	]) }
+int GetMEMCHK(int *x)		{ return(x[MEMCHK	]) }
+int GetEXC(int *x)		{ return((x[EXC1] << 1) + x[EXC0]);}
+int GetLD_EXCV(int *x)		{ return(x[LD_EXCV	]) }

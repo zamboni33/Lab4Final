@@ -1,0 +1,11 @@
+--2013-11-03 01:36:50--  http://users.ece.utexas.edu/~patt/13s.460N/13f.460N/labs/lab2/assembler.linux
+Resolving users.ece.utexas.edu (users.ece.utexas.edu)... 128.83.59.105
+Connecting to users.ece.utexas.edu (users.ece.utexas.edu)|128.83.59.105|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 17502 (17K) [text/plain]
+Saving to: `assembler.linux'
+
+     0K .......... .......                                    100% 1.28M=0.01s
+
+2013-11-03 01:36:51 (1.28 MB/s) - `assembler.linux' saved [17502/17502]
+

@@ -1,0 +1,4 @@
+	.ORIG 0x1A00;
+	HALT;
+	.END
+	
